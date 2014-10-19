@@ -1,11 +1,11 @@
 ﻿<?php
 /* 
-Plugin Name: Jquery Validation 
+Plugin Name: Alphanumeric Jquery Validation 
 Plugin URI: 
 Description: This plugin integrates jquery validation
 Author: Ernests Drungils
 Version: 0.1
-Author URI: http://www.ecowebdesign.eu
+Author URI: http://ecowebdesign.eu
 */
 function my_scripts_method() {
  wp_enqueue_script('custom-script', plugins_url('alphanumeric/js/jquery.alphanum.js'), array('jquery'), '', true);
@@ -14,7 +14,7 @@ add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 /*********************************/
 // Include the validation script snippet
 function start_alphanumeric_script(){
-	if ( is_page(array( 618, 853 )) ) /* load snippet only on registration pages */ { ?> 
+	if ( is_page(array( 618, 853 )) ) /* Replace with your page ID's -  this will load snippet only on registration pages */ { ?> 
     <script type="text/javascript">
     jQuery(document).ready(function(){	
    // validates field #s2member-pro-paypal-checkout-first-name for numeric only input
